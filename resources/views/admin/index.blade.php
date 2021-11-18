@@ -1,5 +1,7 @@
 @extends('admin.master')
 @section('admin')
+
+
 <div class="row row-sm">
     <div class="col-sm-6 col-xl-3">
       <div class="card pd-20 bg-primary">
@@ -201,4 +203,7 @@
       </div><!-- card -->
     </div><!-- col-3 -->
   </div><!-- row -->
-@endsection
+
+
+
+  @endsection

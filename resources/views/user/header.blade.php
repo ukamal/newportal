@@ -222,15 +222,13 @@
         <li><a data-toggle="dropdown" href="#"><i class="far fa-user"></i></a>
                 <div class="user_item dropdown-menu dropdown-menu-right">
                     <div class="admin">
-                        <a href="#" class="user_link"><img src="{{ asset('userbackend/panel/assets/images/admin.png') }}" alt=""></a>
+                        <a href="#" class="user_link"><img src="{{ (!empty($user->profile_photo_path))? url('upload/userimages/'.$user->profile_photo_path):url('upload/no-img.png') }}" alt=""></a>
                     </div>
                 <ul>
                     
                     <li><a href="{{ route('user-profile') }}"><span><i class="fas fa-user"></i></span> User Profile</a></li>
-                    <li><a href=" "><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
-                    <li>
-
-                        <a href="{{ route('user-logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
+                    <li><a href="{{ route('pass-change') }}"><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
+                    <li><a href="{{ route('user-logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
                 </ul>
             </div>
         </li>
